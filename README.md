@@ -28,10 +28,27 @@ Below are predictions made by the model on unseen test data:
 | <img width="658" height="380" alt="Ekran Resmi 2025-11-26 20 02 23" src="https://github.com/user-attachments/assets/dd78fba1-4282-40c8-bada-a0c80299da16" />
 | **"group of people are standing on the beach with camels"**<br>_Demonstrates complex scene understanding._ |
 
+## 📂 Installation and Usage
+
+You have two options to run the project:
+
+### Option 1: For Testing Only (Recommended)
+To make predictions using the pre-trained model without training:
+1. Open the `Demo_Test.ipynb` file in Google Colab.
+2. Download the `final_model.h5` and `tokenizer.pkl` files and place them in the path specified in the code.
+3. Run the cells to see the results.
+
+You can download the pre-trained model required to run the project from the link below:
+👉 **[Google Drive Link: Model and Files](https://drive.google.com/drive/folders/1DxWbq7R8B_wwqFGjG3nsRmuMUH-0hRRJ?usp=share_link)**
+
+### Option 2: To Train the Model from Scratch
+1. Open the `Training.ipynb` file.
+2. Download the Flickr8k dataset.
+3. Run all cells sequentially.
 ---
 
 ## Proje Açıklaması
-Bu proje, Derin Öğrenme yöntemleri kullanılarak görsellerden otomatik olarak anlamlı İngilizce açıklamalar (altyazılar) üreten bir yapay zeka sistemidir. Proje, Ostim Teknik Üniversitesi Derin Öğrenme dersi kapsamında geliştirilmiştir.
+Bu proje, Derin Öğrenme tekniklerini kullanarak görseller için otomatik olarak açıklayıcı altyazılar oluşturan bir görsel altyazı modelini uygulamaktadır. Mimarisi, Bilgisayarlı Görüntü İşleme ve Doğal Dil İşleme'yi birleştiren **"Show and Tell"** modeline dayanmaktadır. 
 
 ### Temel Özellikler
 * **Kodlayıcı (Encoder):** Görüntülerden öznitelik çıkarmak için ImageNet üzerinde eğitilmiş **VGG16** modeli kullanılmıştır.
@@ -43,24 +60,22 @@ Model, Tesla T4 GPU üzerinde 20 Epoch boyunca eğitilmiştir.
 * **Eğitim Kaybı (Loss):** 2.21
 * **Yöntem:** CNN özellik vektörleri ile LSTM kelime gömüleri (embeddings) birleştirilerek (Merge Architecture) eğitilmiştir.
 
-## 📂 Kurulum ve Kullanım (Installation)
+## 📂 Kurulum ve Kullanım 
 
 Projeyi çalıştırmak için iki seçeneğiniz var:
 
 ### Seçenek 1: Sadece Test Etmek İçin (Önerilen)
 Eğitim yapmadan, hazır modeli kullanarak tahmin yapmak için:
-1. `Demo_Test.ipynb` dosyasını Google Colab'de açın.
+1. Dosyalar arasından `Demo_Test.ipynb` dosyasını Google Colab'de açın.
 2. Dosyalar arasından `final_model.h5` ve `tokenizer.pkl` dosyalarını indirin ve kodda belirtilen yola koyun.
 3. Hücreleri çalıştırıp sonuçları görün.
+
+Projeyi çalıştırmak için gerekli olan eğitilmiş modeli aşağıdaki linkten indirebilirsiniz:
+👉 **[Google Drive Linki: Model ve Dosyalar](https://drive.google.com/drive/folders/1DxWbq7R8B_wwqFGjG3nsRmuMUH-0hRRJ?usp=share_link)**
 
 ### Seçenek 2: Modeli Sıfırdan Eğitmek İçin
 1. `Training.ipynb` dosyasını açın.
 2. Dosyalar arasındaki Flickr8k veri setini indirin.
 3. Tüm hücreleri sırasıyla çalıştırın.
 
----
-**Model Dosyaları:**
-Modelin boyutu büyük olduğu için GitHub'a yüklenememiştir. `.h5` ve `.pkl` dosyalarını [Buraya Drive Linkini Yapıştır] adresinden indirebilirsiniz.cells to generate captions for new images.
-
----
 **Developer:** Eda VURAL
